@@ -43,8 +43,6 @@ public class LinkedList1 {
             System.out.print("\n");
             recusLink(a);
 
-            System.out.println(a);
-
 
         }
 
