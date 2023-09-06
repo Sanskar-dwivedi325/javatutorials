@@ -59,7 +59,21 @@ public class LLInsertion{
             t.next=temp.next;
             temp.next=t;
         }
+        void deleteran(int indx){
+            Node temp=head;
+            if(indx==0){
+                head=head.next;
+            }
+            else if(indx<0||indx>Size()){
+                System.out.println("you entered wrong index, you entered  "+ indx +"  which is not valid");
+                return;
+            }
+            for (int i = 1; i <indx ; i++) {
+                temp=temp.next;
 
+            }
+             temp.next=temp.next.next;
+        }
         void display(){
             Node temp=head;
             while(temp!=null){
@@ -93,6 +107,12 @@ public class LLInsertion{
             ll.insertatran(2,111);
             ll.insertatran(0,88);
             ll.insertatran(-8,10);
+            ll.display();
+            System.out.println("size of linked list:"+ll.Size());
+            ll.deleteran(2);
+            ll.deleteran(0);
+            ll.deleteran(19);
+            System.out.println(ll.tail.data +" " + ll.head.data);
             ll.display();
             System.out.println("size of linked list:"+ll.Size());
 

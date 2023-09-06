@@ -1,11 +1,10 @@
 import java.util.*;
 public class CompareString {
     public static void main(String[] args) {
-        String name= new String("name");
-        String hi= new String("nae");
-        System.out.println(name + hi);
-        if (name.equalsIgnoreCase(hi)){
-            System.out.println("hi");
-        }
+        Scanner sc =new Scanner(System.in);
+        String name= "hlw";
+        String hi= "hi";
+        name.concat("hi");
+        System.out.println(name);
     }
 }
