@@ -111,8 +111,9 @@ public class StackLL
                     StackLL.peek();
                     break;
                 case 5:
-                    c=5;
+                    
                     System.out.println("program successfully executed");
+                    System.exit(0);
                     break;
                 default:
                     System.out.println("you enetered wrong choice");
@@ -121,5 +122,5 @@ public class StackLL
 
 
         }
-        while(c!=5);
+        while(true);
     } }
