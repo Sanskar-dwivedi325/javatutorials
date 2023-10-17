@@ -6,7 +6,7 @@ class employee {
 
     public void printdetails() {
 
-        System.out.println("my id is "+ id);
+        System.out.println("my id is " + id);
         System.out.println(" my name is"+ name);
     }
 

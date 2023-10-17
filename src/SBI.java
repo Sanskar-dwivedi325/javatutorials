@@ -3,7 +3,7 @@ import java.sql.SQLOutput;
 import java.util.*;
 class Bank{
     Scanner sc=new Scanner(System.in);
-    double balance=10000;
+    double balance;
 
     public void withdrawal(){
         System.out.println("enter amount");
@@ -37,13 +37,11 @@ class Bank{
         System.out.println("enter amount");
         double amount=sc.nextDouble();
         if(balance<amount){
-            System.out.println("insufficient balance");
-            return;
+            System.out.println("insufficient balance");            return;
         }
         else{
             receiver.balance=amount+ receiver.balance;
-            sender.balance= receiver.balance-amount;
-            balance-=amount;
+            sender.balance= sender.balance-amount;
         System.out.println("Rs "+amount +" transferred successfully to account no. xyz \n"+"your new balance is Rs :"+balance);
         }
 
@@ -56,10 +54,11 @@ public class SBI {
         Bank sanskar=new Bank();
         Bank rudrakshi=new Bank();
         rudrakshi.balance=5000;
+        sanskar.balance=10000;
         Scanner sc=new Scanner(System.in);
         int i=1;
         while(i!=3) {
-            System.out.println("press 1 for sanskar account\n press 2 for rudrakshi account");
+            System.out.println("press 1 for sanskar account\npress 2 for rudrakshi account\npress 3 for exit\n");
             i = sc.nextInt();
             switch (i) {
                 case 1:
@@ -81,7 +80,7 @@ public class SBI {
                                 sanskar.transfer(sanskar, rudrakshi);
                                 break;
                             case 0:
-                                System.out.println("Thankyou");
+                                System.out.println("");
                                 break;
                             default:
                                 System.out.println("you choose invalid option");

@@ -49,7 +49,7 @@ public class Recurssionbasic1 {
        // recurssion1(n);
        // recurssion2(n);
        // recurssionfac(n,1);
-        //recurssionfabonicci(0,1,n);
+        recurssionfabonicci(0,1,n);
         recurssionsumOfN_naturalno(n,0);
 
 
