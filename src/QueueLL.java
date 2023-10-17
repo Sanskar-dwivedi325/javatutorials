@@ -25,8 +25,8 @@ public class QueueLL
 
         }
         else{
-            front.next=temp;
-            front=temp;
+            rear.next=temp;
+            rear=temp;
 
 
 
@@ -43,22 +43,12 @@ public class QueueLL
 
     public static void dequeue(){
         if(front==null){
-            System.out.println("Stack is empty ");
+            System.out.println("queue is empty ");
             return;
         }
 
         else{
-            Node temp=rear;
-            Node temp1=null;
-
-            while(temp.next!=null){
-                temp1=temp;
-                temp=temp.next;
-
-
-            }
-            front=temp1;
-            temp1.next=temp1.next.next;
+            front=front.next;
             System.out.println("element deleted successfully");
 
 
@@ -79,7 +69,7 @@ public class QueueLL
         } }
 
     public static void traverse(){
-        Node temp=rear;
+        Node temp=front;
         if(temp==null){
             System.out.println("stack is empty");
         }
