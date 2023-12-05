@@ -5,7 +5,7 @@ import java.util.*;
 
 public class BubSort {
     public static void main(String[] args){
-        int[] arr={5,4,3,6,1};
+        int[] arr={10,11,3,6,1};
         int n=arr.length;
         for(int i=0;i<n-1;i++){
             boolean flag=false;
